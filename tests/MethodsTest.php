@@ -11,41 +11,41 @@ class MethodsTest extends \PHPUnit\Framework\TestCase
      */
     private $testData = [
         [
-            'data' => 'id',
-            'name' => 'id',
+            'data'       => 'id',
+            'name'       => 'id',
             'searchable' => 'true',
-            'orderable' => 'true',
-            'search' => [
+            'orderable'  => 'true',
+            'search'     => [
                 'value' => '',
                 'regex' => 'false'
             ]
         ],
         [
-            'data' => 'name',
-            'name' => 'name',
+            'data'       => 'name',
+            'name'       => 'name',
             'searchable' => 'true',
-            'orderable' => 'true',
-            'search' => [
+            'orderable'  => 'true',
+            'search'     => [
                 'value' => 'foo',
                 'regex' => 'false'
             ]
         ],
         [
-            'data' => 'table.data',
-            'name' => 'table.data',
+            'data'       => 'table.data',
+            'name'       => 'table.data',
             'searchable' => 'true',
-            'orderable' => 'true',
-            'search' => [
+            'orderable'  => 'true',
+            'search'     => [
                 'value' => '',
                 'regex' => 'false'
             ]
         ],
         [
-            'data' => 'extra',
-            'name' => 'extra',
+            'data'       => 'extra',
+            'name'       => 'extra',
             'searchable' => 'true',
-            'orderable' => 'true',
-            'search' => [
+            'orderable'  => 'true',
+            'search'     => [
                 'value' => '.*bar',
                 'regex' => 'true'
             ]
@@ -58,7 +58,7 @@ class MethodsTest extends \PHPUnit\Framework\TestCase
     private $columns;
 
     /**
-     * Create required user
+     * Create required user.
      *
      * @return void
      */

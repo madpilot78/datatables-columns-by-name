@@ -31,7 +31,7 @@ class Columns
             }
 
             $this->columnData[$values['name']] = [
-                'number' => $number,
+                'number'      => $number,
                 'searchValue' => $sv,
                 'searchRegex' => $re
             ];
