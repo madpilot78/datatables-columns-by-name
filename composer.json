@@ -4,6 +4,13 @@
     "type": "library",
     "license": "MIT",
     "version": "1.0.0",
+    "keywords": [
+        "datatables",
+        "php",
+        "querystring",
+        "query-string",
+        "server-side"
+    ],
     "authors": [
         {
             "name": "Guido Falsi",
