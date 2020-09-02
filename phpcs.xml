@@ -3,6 +3,9 @@
     <description>Project rules</description>
 
     <file>src</file>
+    <file>tests</file>
+
+    <exclude-pattern>tests/bootstrap.php</exclude-pattern>
 
     <arg value="p"/>
     <arg name="colors"/>
