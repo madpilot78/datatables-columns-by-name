@@ -49,6 +49,30 @@ class MethodsTest extends \PHPUnit\Framework\TestCase
                 'value' => '.*bar',
                 'regex' => 'true'
             ]
+        ],
+        [
+            'data'      => 'nosearch',
+            'name'      => 'nosearch'
+        ],
+        [
+            'data'       => 'noregex',
+            'name'       => 'noregex',
+            'searchable' => 'true',
+            'orderable'  => 'true',
+            'search'     => [
+                'value' => '42'
+            ]
+        ],
+        [
+            'data'       => 'noval',
+            'name'       => 'noval',
+            'searchable' => 'true',
+            'orderable'  => 'true',
+            'search'     => [
+                'regex' => 'false'
+            ]
+        ],
+        [
         ]
     ];
 
@@ -78,6 +102,7 @@ class MethodsTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(2, $this->columns->getNumberByName('table.data'));
         $this->assertEquals(3, $this->columns->getNumberByName('extra'));
+        $this->assertFalse($this->columns->getNumberByName('missing'));
     }
 
     /**
@@ -89,6 +114,8 @@ class MethodsTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals('foo', $this->columns->getSearchValueByName('name'));
         $this->assertEquals('.*bar', $this->columns->getSearchValueByName('extra'));
+        $this->assertEquals('', $this->columns->getSearchValueByName('noval'));
+        $this->assertFalse($this->columns->getSearchValueByName('missing'));
     }
 
     /**
@@ -100,5 +127,7 @@ class MethodsTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals('false', $this->columns->getSearchRegexByName('id'));
         $this->assertEquals('true', $this->columns->getSearchRegexByName('extra'));
+        $this->assertEquals('', $this->columns->getSearchRegexByName('noregex'));
+        $this->assertFalse($this->columns->getSearchRegexByName('missing'));
     }
 }
