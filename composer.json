@@ -3,7 +3,6 @@
     "description": "Extract column data by name from datatables query string",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
     "keywords": [
         "datatables",
         "php",
