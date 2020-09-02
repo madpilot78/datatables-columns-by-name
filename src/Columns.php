@@ -30,11 +30,13 @@ class Columns
                 }
             }
 
-            $this->columnData[$values['name']] = [
-                'number'      => $number,
-                'searchValue' => $sv,
-                'searchRegex' => $re
-            ];
+            if (array_key_exists('name', $values)) {
+                $this->columnData[$values['name']] = [
+                    'number'      => $number,
+                    'searchValue' => $sv,
+                    'searchRegex' => $re
+                ];
+            }
         }
     }
 
