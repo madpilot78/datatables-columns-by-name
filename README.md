@@ -15,7 +15,7 @@ It has no external dependencies apart from requiring PHP.
 
 ## Usage
 
-Simply pass the columns input array to the constructor nd call the
+Simply pass the columns input array to the constructor and call the
 methods to get data:
 
 ```php
